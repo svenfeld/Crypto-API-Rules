@@ -36,10 +36,7 @@ EVENTS
 	Ends := gS | Nexts;
 
 ORDER
- 	Ins, Seeds?, Ends?
- 	
-CONSTRAINTS
-	alg in {"SHA1PRNG", "Windows-PRNG", "NativePRNG", "NativePRNGBlocking", "NativePRNGNonBlocking", "PKCS11"};
+ 	*
 	
 REQUIRES	
 	random[seed];

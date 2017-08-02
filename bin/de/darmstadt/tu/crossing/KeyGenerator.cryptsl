@@ -21,7 +21,7 @@ EVENTS
     gk: key = generateKey();
 
 ORDER
-    Gets, Inits?, gk
+    *
 
 CONSTRAINTS
 	alg in {"AES", "Blowfish", "DESede", "HmacSHA224", "HmacSHA256", "HmacSHA384", "HmacSHA512"};

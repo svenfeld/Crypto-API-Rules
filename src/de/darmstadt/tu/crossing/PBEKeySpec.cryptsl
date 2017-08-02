@@ -4,9 +4,6 @@ OBJECTS
 	byte[] salt;
 	int it;
 	int keylength; 
-FORBIDDEN
-	PBEKeySpec(char[]) => c1;
-	PBEKeySpec(char[],byte[],int) => c1;
 	
 EVENTS
 	c1: PBEKeySpec(pw, salt, it, keylength);
@@ -14,10 +11,9 @@ EVENTS
 	cP: clearPassword();
 	
 ORDER
- 	c1,  cP
+ 	*
 CONSTRAINTS
 	it > 1000;
-	neverTypeOf(pw, java.lang.String) ;
 
 REQUIRES
 	random[salt];	

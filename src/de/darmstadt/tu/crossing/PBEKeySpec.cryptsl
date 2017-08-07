@@ -6,12 +6,16 @@ OBJECTS
 	int keylength; 
 	
 EVENTS
-	c1: PBEKeySpec(pw, salt, it, keylength);
+	c1: PBEKeySpec(pw);
+	c2: PBEKeySpec(pw, salt, it);
+	c3: PBEKeySpec(pw, salt, it, keylength);
+	
+	Cons := c1 | c2 | c3;
 	
 	cP: clearPassword();
 	
 ORDER
- 	*
+ 	Cons, cP*
 CONSTRAINTS
 	it > 1000;
 

@@ -35,12 +35,14 @@ EVENTS
 	
 	Ends := gS | Nexts;
 
+	ALL :=  gS | Seeds | Nexts | Ends;
+	
 ORDER
- 	*
+ 	Ins, Seeds?, Ends?
 	
 REQUIRES	
 	random[seed];
-	
+	random[lSeed];
 ENSURES
 	random[this] after Ins;
 	random[genSeed];

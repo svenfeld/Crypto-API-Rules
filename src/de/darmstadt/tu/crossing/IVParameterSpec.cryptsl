@@ -9,7 +9,7 @@ EVENTS
 	Cons := c1 | c2;
 	
 ORDER
-	*
+	Cons*
 REQUIRES
 	random[iv];
 ENSURES

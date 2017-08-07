@@ -60,10 +60,8 @@ EVENTS
     FINWOU := f2 | f5 | f6 | f7;
     DOFINALS := FINWOU | f1 | f3 | f4;
     
-    iv: getIV();
-    
 ORDER
-    *
+    Gets, Inits, (FINWOU | (updates+, DOFINALS))+
 
 CONSTRAINTS
 	part(1, "/", transformation) in {"CBC", "GCM", "PCBC", "CTR", "CTS", "CFB", "OFB"};

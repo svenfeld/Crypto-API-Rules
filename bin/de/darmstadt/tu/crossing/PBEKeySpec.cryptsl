@@ -17,7 +17,7 @@ EVENTS
 ORDER
  	Cons, cP*
 CONSTRAINTS
-	it > 1000;
+	it >= 1000;
 
 REQUIRES
 	random[salt];	

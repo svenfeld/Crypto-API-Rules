@@ -53,12 +53,13 @@ EVENTS
     f1: cipherText = doFinal();
     f2: cipherText =  doFinal(plainText);
     f3: doFinal(cipherText, plain_off);
-    f4: cipherText = doFinal(cipherText, plain_off, len);
+    f4: cipherText = doFinal(plainText, plain_off, len);
     f5: doFinal(plainText, plain_off, len, cipherText);
     f6: doFinal(plainText, plain_off, len, cipherText, ciphertext_off);
     f7: doFinal(plainBuffer, cipherBuffer);
-    FINWOU := f2 | f5 | f6 | f7;
-    DOFINALS := FINWOU | f1 | f3 | f4;
+    FINWOU := f2 | f4 | f5 | f6 | f7;
+    DOFINALS := FINWOU | f1 | f3;
+    
     
 ORDER
     Gets, Inits, (FINWOU | (updates+, DOFINALS))+

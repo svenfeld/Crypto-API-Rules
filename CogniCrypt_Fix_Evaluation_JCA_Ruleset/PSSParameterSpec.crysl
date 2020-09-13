@@ -1,0 +1,29 @@
+SPEC java.security.spec.PSSParameterSpec
+
+OBJECTS 
+	int saltLen;
+	java.lang.String mdName;
+	java.lang.String mgfName;
+	java.security.spec.AlgorithmParameterSpec mgfSpec;
+	int trailerField;
+	
+FORBIDDEN
+	PSSParameterSpec(int) => con;
+	
+EVENTS
+	con: PSSParameterSpec(mdName, mgfName, mgfSpec, saltLen, trailerField);	
+	
+ORDER
+	con
+
+CONSTRAINTS
+	mdName in {"SHA-256", "SHA-384", "SHA-512"};
+	mgfName in {"MGF1"};
+	trailerField in {1};
+	saltLen > 0;
+	
+REQUIRES
+	preparedMGF1[mgfSpec, mdName];
+	
+ENSURES
+	preparedPSS[this] after con;

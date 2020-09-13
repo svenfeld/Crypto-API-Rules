@@ -1,0 +1,18 @@
+SPEC java.security.spec.ECPublicKeySpec
+
+OBJECTS 	
+	java.security.spec.ECPoint w;
+	java.security.spec.ECParameterSpec params;
+	java.security.spec.ECParameterSpec retParams;
+	
+EVENTS
+	con: ECPublicKeySpec(w, params);
+	
+ORDER
+ 	con
+
+REQUIRES
+	preparedEC[params];
+ 	
+ENSURES
+	speccedECPubKeySpec[this] after con;

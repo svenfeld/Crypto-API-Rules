@@ -1,9 +1,13 @@
-name: API rules build
+name: Publish GitHub Actions Artifacts Example
 
 on: [push, pull_request]
 
-steps:
-  - uses: actions/upload-artifact@v2
-  with:
-    name: JCA
-    path: JavaCryptographicArchitecture/src/
+jobs:
+  deploy-rules:
+    runs-on: ubuntu-latest
+    steps:    
+      - name: push_artifacts
+        uses: actions/upload-artifact@v2
+        with: 
+          name: JCA
+          path: JavaCryptographicArchitecture/src/

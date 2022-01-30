@@ -1,0 +1,9 @@
+name: API rules build
+
+on: [push, pull_request]
+
+steps:
+  - uses: actions/upload-artifact@v2
+  with:
+    name: JCA
+    path: JavaCryptographicArchitecture/src/

@@ -5,7 +5,9 @@ on: [push, pull_request]
 jobs:
   deploy-rules:
     runs-on: ubuntu-latest
-    steps:    
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
       - name: push_artifacts
         uses: actions/upload-artifact@v2
         with: 

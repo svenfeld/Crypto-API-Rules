@@ -1,4 +1,4 @@
-name: API rules build
+name: deploy rules
 
 on: [push, pull_request]
 
@@ -34,3 +34,4 @@ jobs:
         run: mvn -f JavaCryptographicArchitecture -B clean deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

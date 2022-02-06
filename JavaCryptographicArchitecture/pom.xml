@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.darmstadt.tu.crossing</groupId>
-	<artifactId>JavaCryptographicArchitecture</artifactId>
+	<artifactId>javaCryptographicArchitecture</artifactId>
 	<version>1.5.2</version>
 	<name>CrySL Rules Bundle</name>
 
@@ -40,18 +40,10 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-		<snapshotRepository>
-			<id>soot-snapshot</id>
-			<name>Soot snapshot repository</name>
-			<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/</url>
-			<layout>default</layout>
-		</snapshotRepository>
-		<repository>
-			<uniqueVersion>true</uniqueVersion>
-			<id>soot-release</id>
-			<name>Soot release repository</name>
-			<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-release/</url>
-			<layout>default</layout>
+	  		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/svenfeld/Crypto-API-Rules</url>
 		</repository>
+
 	</distributionManagement>
 </project>

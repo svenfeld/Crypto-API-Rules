@@ -43,7 +43,7 @@
 	  		<snaptshotRepository>
 			<id>github</id>
 			<url>https://maven.pkg.github.com/svenfeld/Crypto-API-Rules</url>
-	  		<snaptshotRepository>
+	  		</snaptshotRepository>
 
 	</distributionManagement>
 </project>

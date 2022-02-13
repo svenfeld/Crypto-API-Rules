@@ -40,10 +40,10 @@
 	</build>
 	
 	<distributionManagement>
-	  		<snaptshotRepository>
+	  		<repository>
 			<id>github</id>
 			<url>https://maven.pkg.github.com/svenfeld/Crypto-API-Rules</url>
-	  		</snaptshotRepository>
+	  		</repository>
 
 	</distributionManagement>
 </project>

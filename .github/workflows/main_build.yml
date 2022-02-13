@@ -34,4 +34,9 @@ jobs:
         run: mvn -f JavaCryptographicArchitecture -B clean deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Compile, test, and package the project
+        run: mvn -f BouncyCastle -B clean deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 

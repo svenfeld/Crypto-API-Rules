@@ -8,7 +8,8 @@ on:
         required: true
 
 jobs:
-  deploy-rules:
+  printInputs:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "version ${{ github.event.inputs.version }}"
+    - run: |
+        echo "Log level: ${{ github.event.inputs.version }}"

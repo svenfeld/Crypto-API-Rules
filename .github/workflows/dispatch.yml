@@ -1,0 +1,14 @@
+name: Release rules
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "version number for this release."
+        required: true
+
+jobs:
+  deploy-rules:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "input: ${{ github.event.inputs.version }}"

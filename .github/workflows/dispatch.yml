@@ -11,4 +11,4 @@ jobs:
   deploy-rules:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "input: ${{ github.event.inputs.version }}"
+    - run: echo "version ${{ github.event.inputs.version }}"

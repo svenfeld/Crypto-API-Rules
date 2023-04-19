@@ -6,6 +6,29 @@
 	<artifactId>BouncyCastle-JCA</artifactId>
 	<version>0.4</version>
 	<name>CrySL Rules Bundle</name>
+	<licenses>
+   	  <license>
+            <name>Eclipse Public License - v 2.0</name>
+            <url>https://www.eclipse.org/legal/epl-2.0/</url>
+          </license>
+        </licenses>
+	
+	<developers>
+          <developer>
+            <id>toadd</id>
+            <name>toadd</name>
+            <email>toadd</email>
+          </developer>
+        </developers>
+	
+	<scm>
+          <connection>scm:git:git@github.com:CROSSINGTUD/Crypto-API-Rules.git</connection>
+          <developerConnection>scm:git:ssh://github.com:CROSSINGTUD/Crypto-API-Rules.git</developerConnection>
+          <url>https://github.com/CROSSINGTUD/Crypto-API-Rules</url>
+        </scm>
+	
+
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
 		<dependency>
@@ -36,22 +59,62 @@
 					</execution>
 				</executions>
 			</plugin>
+				<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				    <artifactId>maven-javadoc-plugin</artifactId>
+				    <version>3.2.0</version>
+				    <executions>
+					<execution>
+					    <id>attach-javadoc</id>
+					    <goals>
+						<goal>jar</goal>
+					    </goals>
+					</execution>
+				    </executions>
+				</plugin>
+				<plugin>
+				    <groupId>org.apache.maven.plugins</groupId>
+				    <artifactId>maven-source-plugin</artifactId>
+				    <executions>
+					<execution>
+					    <id>attach-source</id>
+					    <goals>
+						<goal>jar</goal>
+					    </goals>
+					</execution>
+				    </executions>
+				</plugin>
+			<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <gpgArguments>
+                <arg>--pinentry-mode</arg>
+                <arg>loopback</arg>
+              </gpgArguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+				
 		</plugins>
 	</build>
 	
 	<distributionManagement>
-		<snapshotRepository>
-			<id>soot-snapshot</id>
-			<name>Soot snapshot repository</name>
-			<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/</url>
-			<layout>default</layout>
-		</snapshotRepository>
-		<repository>
-			<uniqueVersion>true</uniqueVersion>
-			<id>soot-release</id>
-			<name>Soot release repository</name>
-			<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-release/</url>
-			<layout>default</layout>
-		</repository>
-	</distributionManagement>
+   <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+   </snapshotRepository>
+   <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+   </repository>
+</distributionManagement>
 </project>

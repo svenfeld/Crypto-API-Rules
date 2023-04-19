@@ -27,6 +27,6 @@ jobs:
       - name: Build & Deploy
         run: mvn -f BouncyCastleJCA -B -U clean deploy
         env:
-          SIGN_KEY_PASS: ${{ secrets.YOUR_GPG_PRIVATE_KEY }}
+          SIGN_KEY_PASS: ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
           OSSRH_USERNAME: ${{ secrets.SONATYPE_USER }}
           OSSRH_PASSWORD: ${{ secrets.SONATYPE_PW }}

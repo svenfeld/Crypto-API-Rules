@@ -15,16 +15,16 @@
 
     <developers>
         <developer>
-            <id>toadd</id>
-            <name>toadd</name>
-            <email>toadd</email>
+			<id>CogniCrypt</id>
+            <name>CogniCrypt</name>
+            <email>cognicrypt@eim.upb.de</email>
         </developer>
     </developers>
 
     <scm>
         <connection>scm:git:git@github.com:CROSSINGTUD/Crypto-API-Rules.git</connection>
         <developerConnection>scm:git:ssh://github.com:CROSSINGTUD/Crypto-API-Rules.git</developerConnection>
-        <url>https://github.com/CROSSINGTUD/Crypto-API-Rules</url>
+        <url>https://github.com/CROSSINGTUD/Crypto-API-Rules/tree/master/BouncyCastle-JCA</url>
     </scm>
 
 

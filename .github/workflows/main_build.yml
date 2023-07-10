@@ -1,9 +1,8 @@
 name: deploy rules
 
-on:
-  push:
-    branches:
-      - master
+run-name: Release run ${{ github.run_number }}
+on: 
+  workflow_dispatch: # Only run when manually started
 
 jobs:
   build:
@@ -28,7 +27,7 @@ jobs:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }} # Substituted with the value stored in the referenced secret
           gpg-passphrase: SIGN_KEY_PASS # Env var that holds the key's passphrase
       - name: Build & Deploy
-        run: mvn -f BouncyCastleJCA -B -U clean deploy
+        run: mvn -f BouncyCastle-JCA -B -U clean deploy release
         env:
           SIGN_KEY_PASS: ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
           OSSRH_USERNAME: ${{ secrets.SONATYPE_USER }}

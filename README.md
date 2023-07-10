@@ -1,6 +1,6 @@
 # Crypto-API-Rules
 This repository contains all CrySL rules currently used in the crypto assistant CogniCrypt.
-
+ 
 How to write new rules:
 
 1. Install [Eclipse CogniCrypt](https://www.eclipse.org/cognicrypt/)
